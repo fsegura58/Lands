@@ -14,7 +14,7 @@ namespace Lands
         {
             InitializeComponent();
 
-            MainPage = new NavigationPage(new LoginPage()) ;
+            this.MainPage = new NavigationPage(new LoginPage()) ;
         }
         #endregion
 

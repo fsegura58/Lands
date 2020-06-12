@@ -3,23 +3,23 @@
      xmlns="http://xamarin.com/schemas/2014/forms"
      xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
      x:Class="Lands.Views.LoginPage"
-    Title="Login">
+    Title="Lands">
     <ContentPage.Content>
         <ScrollView>
             <StackLayout 
                 Padding="10,20,10,5">
-                <Label 
+                <!--<Label 
                     FontAttributes="Bold"
                     FontSize="Large"
                     HorizontalOptions="Center"
                     Text="Lands">
-                </Label>
+                </Label>-->
                 <Image
                     Source="onu"
                     WidthRequest="200">
                 </Image>
                 <Grid
-                    Margin="0,20">
+                    Margin="10,0">
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="*"/>
                         <ColumnDefinition Width="2*"/>
@@ -27,7 +27,8 @@
                     <Label 
                         Grid.Row="0"
                         Grid.Column="0"
-                        Text="E-Mail">
+                        Text="E-Mail"
+                        VerticalOptions="Center">
                     </Label>
                     <Entry
                         Grid.Row="0"
@@ -38,7 +39,8 @@
                     <Label 
                         Grid.Row="1"
                         Grid.Column="0"
-                        Text="Password">
+                        Text="Password"
+                        VerticalOptions="Center">
                     </Label>
                     <Entry
                         Grid.Row="1"
@@ -49,7 +51,8 @@
                 </Grid>
                 <ActivityIndicator>
                 </ActivityIndicator>
-                <StackLayout 
+                <StackLayout
+                    Margin="10,0"
                     Orientation="Horizontal"
                     VerticalOptions="Center">
                     <Label
@@ -66,37 +69,40 @@
                     TextColor="Blue">
                 </Label>
                 <StackLayout
+                    Orientation="Horizontal"
                     Margin="40,0">
                     <Button
-                    BackgroundColor="Navy"
-                    BorderRadius="23"
-                    HeightRequest="46"
-                    Text="Login"
-                    TextColor="White">
-                        </Button>
-                        <Button
-                    BackgroundColor="Purple"
-                    BorderRadius="23"
-                    HeightRequest="46"
-                    Text="Register"
-                    TextColor="White">
+                        BackgroundColor="Navy"
+                        BorderRadius="23"
+                        HeightRequest="46"
+                        HorizontalOptions="FillAndExpand"
+                        Text="Login"
+                        TextColor="White">
+                    </Button>
+                    <Button
+                        BackgroundColor="Purple"
+                        BorderRadius="23"
+                        HeightRequest="46"
+                        HorizontalOptions="FillAndExpand"
+                        Text="Register"
+                        TextColor="White">
                     </Button>
                 </StackLayout>
                 <StackLayout
                     HorizontalOptions="Center"
                     Orientation="Horizontal">
-                        <Image
+                    <Image
                         Source="facebook_logo"
                         WidthRequest="55">
-                        </Image>
-                        <Image
+                    </Image>
+                    <Image
                         Source="twitter_logo"
                         WidthRequest="100">
                         </Image>
-                        <Image
+                    <Image
                         Source="instagram_logo"
                         WidthRequest="55">
-                        </Image>
+                    </Image>
                 </StackLayout>
             </StackLayout>
          </ScrollView>
