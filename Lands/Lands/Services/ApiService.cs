@@ -125,10 +125,10 @@
                 var client = new HttpClient();
                 client.BaseAddress = new Uri(urlBase);
                 var url = string.Format("{0}{1}", servicePrefix, controller);
-                //var response = await client.GetAsync(url);
-                var response = client.GetAsync(url).Result;
-                //var result = await response.Content.ReadAsStringAsync();
-                var result = response.Content.ReadAsStringAsync().Result;
+                var response = await client.GetAsync(url);
+                //var response = client.GetAsync(url).Result;
+                var result = await response.Content.ReadAsStringAsync();
+                //var result = response.Content.ReadAsStringAsync().Result;
 
                 if (!response.IsSuccessStatusCode)
                 {
