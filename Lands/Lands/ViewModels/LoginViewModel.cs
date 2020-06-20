@@ -5,6 +5,7 @@
     using Services;
     using Views;
     using Xamarin.Forms;
+    using Helpers;
 
     public class LoginViewModel : BaseViewModel
     {
@@ -58,8 +59,8 @@
             this.IsRemembered = true;
             this.IsEnabled = true;
 
-            //this.Email = "fsegura58@gmail.com";
-            //this.Password = "1234";
+            this.Email = "paty@gmail.com";
+            this.Password = "123456";
         }
         #endregion
 
@@ -77,9 +78,13 @@
             if (string.IsNullOrEmpty(this.Email))
             {
                 await Application.Current.MainPage.DisplayAlert(
-                    "Error",
-                    "You must enter an email.",
-                    "Accept");
+                    Languages.Error,
+                    Languages.EmailValidation,
+                    Languages.Accept);
+                //await Application.Current.MainPage.DisplayAlert(
+                //"Error",
+                //"You must enter an email.",
+                //"Accept");
                 return;
             }
 
