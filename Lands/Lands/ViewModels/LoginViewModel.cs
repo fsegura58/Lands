@@ -91,9 +91,13 @@
             if (string.IsNullOrEmpty(this.Password))
             {
                 await Application.Current.MainPage.DisplayAlert(
-                    "Error",
-                    "You must enter a password.",
-                    "Accept");
+                    Languages.Error,
+                    Languages.PasswordValidation,
+                    Languages.Accept);
+                //await Application.Current.MainPage.DisplayAlert(
+                //    "Error",
+                //    "You must enter a password.",
+                //    "Accept");
                 return;
             }
 
@@ -119,9 +123,9 @@
                 this.IsRunning = false;
                 this.IsEnabled = true;
                 await Application.Current.MainPage.DisplayAlert(
-                    "Error",
+                    Languages.Error,
                     connection.Message,
-                    "Accept");
+                    Languages.Accept);
                 return;
             }
 
@@ -134,10 +138,16 @@
             {
                 this.IsRunning = false;
                 this.IsEnabled = true;
+
                 await Application.Current.MainPage.DisplayAlert(
-                    "Error",
-                    "Sometime was wrong, please try later.",
-                    "Accept");
+                    Languages.Error,
+                    Languages.SomethingWrong,
+                    Languages.Accept);
+
+                //await Application.Current.MainPage.DisplayAlert(
+                //    Languages.Error,
+                //    "Sometime was wrong, please try later.",
+                //    Languages.Accept);
                 return;
             }
 
@@ -145,10 +155,11 @@
             {
                 this.IsRunning = false;
                 this.IsEnabled = true;
+
                 await Application.Current.MainPage.DisplayAlert(
-                    "Error",
+                    Languages.Error,
                     token.ErrorDescription,
-                    "Accept");
+                    Languages.Accept);
                 this.Password = string.Empty;
                 return;
             }
