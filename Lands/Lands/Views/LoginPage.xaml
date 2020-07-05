@@ -52,7 +52,7 @@
                         Grid.Column="1"
                         IsPassword="True"
                         Text="{Binding Password, Mode=TwoWay}"
-                        Placeholder="{i18n:Translate EmailPlaceHolder}">
+                        Placeholder="{i18n:Translate PasswordPlaceHolder}">
                     </Entry>
                 </Grid>
                 <ActivityIndicator
