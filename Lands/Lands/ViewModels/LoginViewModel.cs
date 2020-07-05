@@ -59,7 +59,7 @@
             this.IsRemembered = true;
             this.IsEnabled = true;
 
-            this.Email = "paty@gmail.com";
+            this.Email = "marioa@gmail.com";
             this.Password = "123456";
         }
         #endregion
@@ -165,11 +165,14 @@
             }
 
             var mainViewModel = MainViewModel.GetInstance();
-            mainViewModel.Token = token;
-
+            mainViewModel.Token = token.AccessToken;
+            mainViewModel.TokenType = token.TokenType;
+            //mainViewModel.Token = token;
+            Settings.Token = token.AccessToken;
+            Settings.TokenType = token.TokenType;
             mainViewModel.Lands = new LandsViewModel();
-            //await Application.Current.MainPage.Navigation.PushAsync(new LandsPage());
             Application.Current.MainPage = new MasterPage();
+            //await Application.Current.MainPage.Navigation.PushAsync(new LandsPage());
 
             this.IsRunning = false;
             this.IsEnabled = true;
