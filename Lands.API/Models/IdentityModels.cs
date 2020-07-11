@@ -29,5 +29,7 @@ namespace Lands.API.Models
         {
             return new ApplicationDbContext();
         }
+
+        public System.Data.Entity.DbSet<Lands.Domain.UserType> UserTypes { get; set; }
     }
 }

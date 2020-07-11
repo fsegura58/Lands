@@ -360,4 +360,7 @@
   <data name="ErrorChangingPassword" xml:space="preserve">
     <value>La contraseña no pudo ser cambiada, por favor intenta más tarde.</value>
   </data>
+  <data name="TakeImageGalery" xml:space="preserve">
+    <value>La cámara no está disponible. Podrá tomar la imagen desde la galería.</value>
+  </data>
 </root>

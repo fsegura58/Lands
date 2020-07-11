@@ -279,6 +279,12 @@
                             Directory = "Sample",
                             Name = "test.jpg",
                             PhotoSize = PhotoSize.Small,
+                            //SaveToAlbum = true,
+                            //CompressionQuality = 75,
+                            //CustomPhotoSize = 50,
+                            //PhotoSize = PhotoSize.MaxWidthHeight,
+                            //MaxWidthHeight = 2000,
+                            DefaultCamera = CameraDevice.Front,
                         }
                     );
                 }
@@ -289,14 +295,22 @@
             }
             else
             {
+                await Application.Current.MainPage.DisplayAlert(
+                    Languages.Error,
+                    Languages.TakeImageGalery,
+                    Languages.Accept);
+
                 this.file = await CrossMedia.Current.PickPhotoAsync();
             }
 
             if (this.file != null)
             {
+                //await Application.Current.MainPage.DisplayAlert("File ubication", file.Path, "Ok");
+
                 this.ImageSource = ImageSource.FromStream(() =>
                 {
                     var stream = file.GetStream();
+                    //file.Dispose();
                     return stream;
                 });
             }

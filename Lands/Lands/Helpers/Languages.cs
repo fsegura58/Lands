@@ -412,5 +412,10 @@
         {
             get { return Resource.ErrorChangingPassword; }
         }
+
+        public static string TakeImageGalery
+        {
+            get { return Resource.TakeImageGalery; }
+        }
     }
 }
