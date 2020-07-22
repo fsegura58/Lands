@@ -5,6 +5,7 @@
     using System.Collections.ObjectModel;
     using Models;
     using Helpers;
+    using Domain;
 
     public class MainViewModel
     {
@@ -34,6 +35,12 @@
         //}
 
         public ObservableCollection<MenuItemViewModel> Menus
+        {
+            get;
+            set;
+        }
+
+        public User User
         {
             get;
             set;
